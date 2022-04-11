@@ -70,7 +70,7 @@ $basket = new Basket(111111, 111112);
 $basket -> addGoods($arGoods[0]);
 // $basket -> removeGoods(1112);
 // $basket -> clearBasket();
-// print_r($basket -> viewGoods());
+print_r($basket -> viewGoods());
 
 // $BasketLegalEntity = new BasketLegalEntity(111113, 111114);
 // $BasketLegalEntity -> addGoods($arGoods[0]);
