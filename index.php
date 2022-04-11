@@ -49,9 +49,15 @@ class Basket
     }
 }
 
-class Small_Basket
+class BasketLegalEntity extends Basket
 {
-    
+    private $id_legal;
+    private $discount = 20;
+
+    public function getDiscount($price)
+    {
+        return $price * $this -> discount / 100;
+    }
 }
 
 $arGoods = 
@@ -61,7 +67,12 @@ $arGoods =
 ];
 
 $basket = new Basket(111111, 111112);
-// $basket -> addGoods($arGoods[0]);
-$basket -> removeGoods(1112);
+$basket -> addGoods($arGoods[0]);
+// $basket -> removeGoods(1112);
 // $basket -> clearBasket();
-print_r($basket -> viewGoods());
+// print_r($basket -> viewGoods());
+
+// $BasketLegalEntity = new BasketLegalEntity(111113, 111114);
+// $BasketLegalEntity -> addGoods($arGoods[0]);
+// $BasketLegalEntity -> getDiscount(1000);
+// print_r($BasketLegalEntity -> viewGoods());
